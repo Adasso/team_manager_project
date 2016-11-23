@@ -15,6 +15,12 @@
 
     <div class="field">
       <br />
+      <%= f.label :phone_number %><br />
+      <%= f.phone_field :phone_number %>
+    </div>
+
+    <div class="field">
+      <br />
       <%= f.label :password %> <br /><i>(leave blank if you don't want to change it)</i><br />
       <%= f.password_field :password, autocomplete: "off" %>
       <% if @minimum_password_length %>

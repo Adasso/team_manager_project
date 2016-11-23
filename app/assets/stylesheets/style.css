@@ -7,6 +7,16 @@ body{
   margin-top: 200px;
 }
 
+label{
+  width:200px;
+  margin: 0 auto;
+}
+
+input{
+  width: 200px;
+  text-align: center;
+}
+
 .topbar{
   top: 0;
   z-index: 9;

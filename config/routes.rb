@@ -17,10 +17,13 @@ Rails.application.routes.draw do
     root :to => "home#index"
   end
 
+  
+  
   root :to => redirect("/users/sign_in")
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   #root 'home#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Added by vj
+  post '/send_sms' => 'home#send_sms'
 end

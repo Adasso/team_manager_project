@@ -1,3 +1,14 @@
 <%= render 'layouts/welcome' %>
 <h1>Team Manager Homepage</h1>
 <p class="center">This is the home page</p>
+
+
+
+<!--- Added by vj ---->
+<h3>TWILIO Demo - Prototype 1</h3>
+
+    <%= form_tag('/send_sms', method: 'POST') do %>
+    <input type="text" placeholder="enter number" name="number">
+    <input type="text" placeholder="enter message here" name="message">
+    <button type="submit">Submit</button>
+    <% end %>

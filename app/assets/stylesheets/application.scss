@@ -17,9 +17,10 @@
 @import "bootstrap";
 
 body{
-  background-color: #000;
-  color: #FE9A2E;
+  background-color: #ffffff;
+  color: #000080;
 }
+
 
 .wrapper{
   margin-top: 200px;
@@ -28,18 +29,19 @@ body{
 .topbar{
   top: 0;
   z-index: 9;
-  background-color: #FE9A2E;
+  background-color: #ffffff;
+  color: #000080;
   opacity: 80%;
 }
 
 .topbar a{
-  color: #000;
+  color: #ffffff;
   text-decoration: none !important;
 }
 
 .topbar a:hover{
-  color: #fff;
-  background-color:#FE9A2E;
+  color: #ffffff;
+  background-color:#000080;
 }
 
 .mlink{
@@ -54,8 +56,57 @@ body{
 }
 
 h2, h1{
-  text-align: center;
-  text-decoration: underline;
+  color: #000080;
+  background-color: #ffffff;
+}
+/* navbar */
+.navbar-default {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+}
+/* title */
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #D5D5D5;
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
 }
 
 a{
@@ -83,6 +134,9 @@ a{
 .pbody{
     width: 400px;
 }
+.small{
+  color: #ffffff
+}
 .table{
   margin: auto;
 }
@@ -92,7 +146,8 @@ a{
 }
 
 input[type="text"], textarea {
-  background-color : #A4A4A4;
+  background-color : #ffffff;
+  color: #000
 }
 
 input[type=submit] {
@@ -101,7 +156,7 @@ input[type=submit] {
   width: auto;
   height: 25px;
   border-radius: 5px;
-  color: #ffffff;
+  color: #000;
   font-size: auto;
   background: #FE9A2E;
   text-decoration: none;

@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added by vj
 gem 'twilio-ruby'
+
+# Added by AlexH
+gem 'bootstrap-sass'

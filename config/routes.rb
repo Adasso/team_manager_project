@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   post '/send_sms' => 'home#send_sms'
 
   get 'messages', to: 'home#messages'
-  get 'schedule', to: 'home#schedule'
+  get 'schedules', to: 'home#schedules'
   get 'statistics', to: 'home#statistics'
 
 end

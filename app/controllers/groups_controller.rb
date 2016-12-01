@@ -12,6 +12,18 @@ class GroupsController < ApplicationController
   def show
   end
 
+  def join
+    @group = Group.find params[:id]
+    current_user.update_attribute(:group_id, @group.id)
+    redirect_to @group
+  end
+
+  def leave
+    @group = Group.find params[:id]
+    current_user.update_attribute(:group_id, nil)
+    redirect_to @group
+  end
+
   # GET /groups/new
   def new
     @group = Group.new

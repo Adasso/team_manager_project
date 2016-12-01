@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :groups
+  resources :groups do
+    member do
+      get 'join'
+      get 'leave'
+    end
+  end
   resources :people
   #devise_scope :user do
   #  root to: "devise/sessions#new"
@@ -18,8 +23,8 @@ Rails.application.routes.draw do
     root :to => "home#index"
   end
 
-  
-  
+
+
   root :to => redirect("/users/sign_in")
 
   devise_for :users, :controllers => { registrations: 'registrations' }

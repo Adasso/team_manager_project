@@ -48,23 +48,54 @@
 <!--</div>-->
 
 
+
+<div class="row">
+  <div class="panel panel-default col-sm-6">
+    <div class="panel-header">
+      <h3><u> Announcements</u></h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">2017 Soccer Season Begins August 1st!</li>
+        <li class="list-group-item">Statistics have been updated from 2015 season.  Check them out!</li>
+        <li class="list-group-item">Photos have been added from the Tournament!</li>
+        <li class="list-group-item">Championship Game is November 8th, 2016.</li>
+        <li class="list-group-item">Tournament begins October 15th.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-default col-sm-6">
+    <div class="panel-header">
+      <h3><u>TODO List Before Season Begins</u></h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">Create/Update Profile</li>
+        <li class="list-group-item">Join a team</li>
+        <li class="list-group-item">Pick up uniform</li>
+        <li class="list-group-item">Check practice schedule</li>
+        <li class="list-group-item">Ready to start!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="panel panel-default">
   <div class="panel-header">
     TWILIO Demo - Prototype 1
   </div>
   <div class="panel-body">
-<!--- Added by vj ---->
+    <!--- Added by vj ---->
     <%= form_tag('/send_sms', method: 'POST') do %>
-    <input type="text" placeholder="enter number" name="number">
-    <input type="text" placeholder="enter message here" name="message">
-    <button type="submit">Submit</button>
+        <input type="text" placeholder="enter number" name="number">
+        <input type="text" placeholder="enter message here" name="message">
+        <button type="submit">Submit</button>
     <% end %>
   </div>
 </div>
 
+</br><br> <p>**---Move to messages page---**</p>
 <!--- Added by AlexH ---->
-
-
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
     <div id="user_nav" class="pull-right">

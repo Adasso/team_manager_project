@@ -16,3 +16,4 @@
 
 // Added by AlexH
 //= require bootstrap-sprockets
+//= require_tree .

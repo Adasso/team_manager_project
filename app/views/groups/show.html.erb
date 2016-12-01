@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<%= render 'home/navbar' %>
+<div class="center">
+  <p>
+    <strong>Team Name:</strong>
+    <%= @group.name %>
+  </p>
+
+  <% if current_user.has_role?(:admin) %>
+    <%= link_to 'Edit', edit_group_path(@group) %> |
+  <% end %>
+
+    <%= link_to 'Back', groups_path %> |
+    <%= link_to 'Join', join_group_path(@group) %> |
+    <%= link_to 'Leave', leave_group_path(@group) %>
+</div>

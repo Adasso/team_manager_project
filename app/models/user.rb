@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  belongs_to :group
   rolify
 
   after_create :assign_default_role

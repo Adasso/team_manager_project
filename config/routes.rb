@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   end
 
 
-
   root :to => redirect("/users/sign_in")
 
   devise_for :users, :controllers => { registrations: 'registrations' }
@@ -32,4 +31,9 @@ Rails.application.routes.draw do
 
   # Added by vj
   post '/send_sms' => 'home#send_sms'
+
+  get 'messages', to: 'home#Messages'
+  get 'schedule', to: 'home#Schedule'
+  get 'statistics', to: 'home#Statistics'
+
 end

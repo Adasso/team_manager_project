@@ -55,4 +55,5 @@ gem 'twilio-ruby'
 
 # Added by AlexH
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'wdm', '>= 0.1.0'

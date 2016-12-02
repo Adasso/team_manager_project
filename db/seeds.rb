@@ -35,7 +35,7 @@ admin.gender = "Male"
 admin.date_of_birth = "May 20, 2000"
 admin.height_in_inches = "67"
 admin.weight_in_pounds = "150"
-admin.group_id = "1"
+admin.group_id = "4"
 admin.add_role "admin"
 admin.save
 

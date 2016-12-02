@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  #!--- Added by AlvaroD ----#
+  before_filter :authenticate_user!
+  #!---  ----#
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
@@ -37,7 +40,7 @@ class GroupsController < ApplicationController
   # POST /groups.json
   def create
     @group = Group.new(group_params)
-
+    authorize @group
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
@@ -52,6 +55,7 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1
   # PATCH/PUT /groups/1.json
   def update
+    authorize @group
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to @group, notice: 'Group was successfully updated.' }
@@ -66,6 +70,7 @@ class GroupsController < ApplicationController
   # DELETE /groups/1
   # DELETE /groups/1.json
   def destroy
+    authorize @group
     @group.destroy
     respond_to do |format|
       format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }

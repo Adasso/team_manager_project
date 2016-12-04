@@ -6,6 +6,26 @@
     <%= @group.name %>
   </p>
 
+  <table class="centertable">
+    <thead>
+      <tr>
+        <th>Members</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <% if user.group_id == @group.id %>
+            <td><%= user.last_name %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
   <% if current_user.has_role?(:admin) %>
     <%= link_to 'Edit', edit_group_path(@group) %> |
   <% end %>

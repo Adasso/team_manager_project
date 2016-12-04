@@ -150,7 +150,7 @@ user8.weight_in_pounds = "160"
 user8.group_id = "5"
 user8.add_role "user"
 user8.save
-user9.phone_number="5059087361"
+user8.phone_number="5059087361"
 
 
 user9 = User.new

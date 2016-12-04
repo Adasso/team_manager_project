@@ -4,7 +4,6 @@ class HomeController < ApplicationController
 #  after_action :verify_authorized
 
 #!--- Added by  ----#
-
     def send_sms
     message = params[:message]
     number = params[:number]

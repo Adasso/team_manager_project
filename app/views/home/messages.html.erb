@@ -12,6 +12,33 @@
 
 <%= render 'home/navbar' %>
 
+
+<!--- List all possible teams as drop down --->
+<% @groups = Group.all %> <!--- Query to search for all people having same group id --->
+<h1>Teams</h1>
+<table class="centertable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+
+        <% if current_user.has_role?(:admin) %>
+          <td><%= link_to 'Message', messages_path(group) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!--- After selecting a team got to home action --->
+
 <div class="panel panel-default">
   <div class="panel-header">
     TWILIO Demo - Prototype 1

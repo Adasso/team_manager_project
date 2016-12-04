@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Team Members
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
 <%= render 'home/navbar' %>
+
 <div class="center">
   <p>
     <strong>Team Name:</strong>
@@ -11,17 +25,16 @@
 with that id --->
 <!---pujitha--->
 <% @cur_users = User.where("group_id = ?",@group.id) %> <!--- Query to search for all people having same group id --->
-<table align="center">
+<table class="centertable">
   <tr>
-    <th> User id </th>
-
-    <th> User first_name</th>
-    <th> User last_name </th>
-    <th> User email </th>
-    <th> User date_of_birth</th>
-    <th> User gender</th>
-    <th> User height_in_inches</th>
-    <th> User weight_in_pounds </th>
+    <th> ID </th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Height(in)</th>
+    <th>Weight(lbs)</th>
   </tr>
 <% @cur_users.each do |cur_user| %>
   <tr>

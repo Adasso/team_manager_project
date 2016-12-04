@@ -6,24 +6,42 @@
     <%= @group.name %>
   </p>
 
-  <table class="centertable">
-    <thead>
-      <tr>
-        <th>Members</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <% if user.group_id == @group.id %>
-            <td><%= user.last_name %></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<!--- Using @goup.id I would like to have an object that contains all people
+with that id --->
+<!---pujitha--->
+<% @cur_users = User.where("group_id = ?",@group.id) %> <!--- Query to search for all people having same group id --->
+<table align="center">
+  <tr>
+    <th> User id </th>
+
+    <th> User first_name</th>
+    <th> User last_name </th>
+    <th> User email </th>
+    <th> User date_of_birth</th>
+    <th> User gender</th>
+    <th> User height_in_inches</th>
+    <th> User weight_in_pounds </th>
+  </tr>
+<% @cur_users.each do |cur_user| %>
+  <tr>
+    <td><%= cur_user.id %></td>
+    <td><%= cur_user.first_name %></td>
+    <td><%= cur_user.last_name %></td>
+    <td><%= cur_user.email %></td>
+    <td><%= cur_user.date_of_birth%></td>
+    <td><%= cur_user.gender %></td>
+    <td><%= cur_user.height_in_inches%></td>
+    <td><%= cur_user.weight_in_pounds %></td>
+
+
+  </tr>
+<% end %>
+</table>
+
+
+
+
 
 
   <% if current_user.has_role?(:admin) %>

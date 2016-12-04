@@ -56,4 +56,4 @@ gem 'twilio-ruby'
 # Added by AlexH
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'wdm', '>= 0.1.0'  if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
+# gem 'wdm', '>= 0.1.0'

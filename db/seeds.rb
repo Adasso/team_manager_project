@@ -26,6 +26,10 @@ watermelon = Group.new
 watermelon.name = "Team Watermelon"
 watermelon.save
 
+rocket = Group.new
+rocket.name = "Team Rocket"
+rocket.save
+
 admin = User.new
 admin.email = "admin@test.com"
 admin.password = "test123"
@@ -149,8 +153,8 @@ user8.height_in_inches = "68"
 user8.weight_in_pounds = "160"
 user8.group_id = "5"
 user8.add_role "user"
-user8.save
 user8.phone_number="5059087361"
+user8.save
 
 
 user9 = User.new
@@ -164,5 +168,89 @@ user9.height_in_inches = "98"
 user9.weight_in_pounds = "150"
 user9.group_id = "5"
 user9.add_role "user"
+user9.phone_number="5059087361"
 user9.save
-user9.phone_number="5053184090"
+
+user10 = User.new
+user10.email = "user10@test.com"
+user10.password = "test123"
+user10.first_name = "IAm"
+user10.last_name = "User10"
+user10.gender = "Female"
+user10.date_of_birth = "May 29, 2001"
+user10.height_in_inches = "98"
+user10.weight_in_pounds = "150"
+user10.group_id = "6"
+user10.add_role "user"
+user10.phone_number="5059087361"
+user10.save
+
+user11 = User.new
+user11.email = "user11@test.com"
+user11.password = "test123"
+user11.first_name = "IAm"
+user11.last_name = "User11"
+user11.gender = "Female"
+user11.date_of_birth = "May 29, 2001"
+user11.height_in_inches = "98"
+user11.weight_in_pounds = "150"
+user11.group_id = "6"
+user11.add_role "user"
+user11.phone_number="2022514094"
+user11.save
+
+user12 = User.new
+user12.email = "user12@test.com"
+user12.password = "test123"
+user12.first_name = "IAm"
+user12.last_name = "User12"
+user12.gender = "Female"
+user12.date_of_birth = "May 29, 2001"
+user12.height_in_inches = "98"
+user12.weight_in_pounds = "150"
+user12.group_id = "6"
+user12.add_role "user"
+user12.phone_number="5053184090"
+user12.save
+
+user13 = User.new
+user13.email = "user13@test.com"
+user13.password = "test123"
+user13.first_name = "IAm"
+user13.last_name = "User13"
+user13.gender = "Female"
+user13.date_of_birth = "May 29, 2001"
+user13.height_in_inches = "98"
+user13.weight_in_pounds = "150"
+user13.group_id = "6"
+user13.add_role "user"
+user13.phone_number="5052897651"
+user13.save
+
+user14 = User.new
+user14.email = "user14@test.com"
+user14.password = "test123"
+user14.first_name = "IAm"
+user14.last_name = "User14"
+user14.gender = "Female"
+user14.date_of_birth = "May 29, 2001"
+user14.height_in_inches = "98"
+user14.weight_in_pounds = "150"
+user14.group_id = "6"
+user14.add_role "user"
+user14.phone_number="5052391479"
+user14.save
+
+user15 = User.new
+user15.email = "user15@test.com"
+user15.password = "test123"
+user15.first_name = "IAm"
+user15.last_name = "User15"
+user15.gender = "Female"
+user15.date_of_birth = "May 29, 2001"
+user15.height_in_inches = "98"
+user15.weight_in_pounds = "150"
+user15.group_id = "6"
+user15.add_role "user"
+user15.phone_number=" 5052369592"
+user15.save

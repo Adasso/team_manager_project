@@ -29,9 +29,7 @@
       <tr>
         <td><%= group.name %></td>
 
-        <% if current_user.has_role?(:admin) %>
-          <td><%= link_to 'Message', messages_path(group) %></td>
-        <% end %>
+          <td><%= link_to 'Message', create_sms_path(group) %></td>
       </tr>
     <% end %>
   </tbody>

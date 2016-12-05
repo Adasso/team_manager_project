@@ -31,8 +31,10 @@ Rails.application.routes.draw do
 
   # Added by vj
   post '/send_sms' => 'home#send_sms'
+    post '/send_group_sms' => 'home#send_group_sms'
 
   get 'messages', to: 'home#messages'
+  get '/home/create_sms/:id', to: 'home#create_sms', as: 'create_sms'
   get 'schedules', to: 'home#schedules'
   get 'statistics', to: 'home#statistics'
 

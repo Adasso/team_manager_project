@@ -19,16 +19,39 @@
 <!--- SQL query to get all memebrs in this group --->
 <% @cur_users = User.where("group_id = ?",@group_id) %> <!--- Query to search for all people having same group id --->
 
+
 <% ph_string = ''%>
 <% i = 1%>
 <% @cur_users.each do |cur_user| %>
-<% if i == 1%>
-<% ph_string = ph_string + cur_user.phone_number %>
-<% else %>
-<% ph_string = ph_string+','+cur_user.phone_number %>
-<% end %>
+	<% if i == 1%>
+		<% ph_string = ph_string + cur_user.phone_number %>
+	<% else %>
+		<% ph_string = ph_string+','+cur_user.phone_number %>
+	<% end %>
 <% i = i + 1%>
 <% end %>
+
+
+
+
+
+
+
+
+
+<h1> Prototype 2 message will be sent to: </h1>
+<table class="centertable">
+  <tr>
+    <th> Name </th>
+    <th> Phone numbers </th>
+  </tr>
+<% @cur_users.each do |cur_user| %>
+  <tr>
+    <td><%= cur_user.last_name %></td>
+    <td><%= cur_user.phone_number %></td>
+  </tr>
+<% end %>
+</table>
 
 
 <div class="panel panel-default">
@@ -43,26 +66,6 @@
     <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-<table class="centertable">
-  <tr>
-    <th> Phone numbers </th>
-  </tr>
-<% @cur_users.each do |cur_user| %>
-  <tr>
-    <td><%= cur_user.phone_number %></td>
-  </tr>
-<% end %>
-</table>
-
-
-
 
 
 

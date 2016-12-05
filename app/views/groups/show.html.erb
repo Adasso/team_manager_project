@@ -35,6 +35,8 @@ with that id --->
     <th>Gender</th>
     <th>Height(in)</th>
     <th>Weight(lbs)</th>
+    <th>Phone number </th>
+    <th>Message?</th>
   </tr>
 <% @cur_users.each do |cur_user| %>
   <tr>
@@ -46,8 +48,8 @@ with that id --->
     <td><%= cur_user.gender %></td>
     <td><%= cur_user.height_in_inches%></td>
     <td><%= cur_user.weight_in_pounds %></td>
-
-
+    <td><%= cur_user.phone_number %></td>
+    <td><%= link_to 'Message', create_sms_per_person_path(cur_user) %></td> 
   </tr>
 <% end %>
 </table>
@@ -62,6 +64,6 @@ with that id --->
   <% end %>
 
     <%= link_to 'Back', groups_path %> |
-    <%= link_to 'Join', join_group_path(@group) %> |
-    <%= link_to 'Leave', leave_group_path(@group) %>
+    <%= link_to 'Join', join_group_path(@group) , :data => {:confirm => 'Are you sure?'}%> |
+    <%= link_to 'Leave', leave_group_path(@group) , :data => {:confirm => 'Are you sure?'} %>
 </div>

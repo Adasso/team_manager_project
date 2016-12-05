@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Team Members
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
 <%= render 'home/navbar' %>
+
 <div class="center">
   <p>
     <strong>Team Name:</strong>
@@ -11,17 +25,18 @@
 with that id --->
 <!---pujitha--->
 <% @cur_users = User.where("group_id = ?",@group.id) %> <!--- Query to search for all people having same group id --->
-<table align="center">
+<table class="centertable">
   <tr>
-    <th> User id </th>
-
-    <th> User first_name</th>
-    <th> User last_name </th>
-    <th> User email </th>
-    <th> User date_of_birth</th>
-    <th> User gender</th>
-    <th> User height_in_inches</th>
-    <th> User weight_in_pounds </th>
+    <th> ID </th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Height(in)</th>
+    <th>Weight(lbs)</th>
+    <th>Phone number </th>
+    <th>Message?</th>
   </tr>
 <% @cur_users.each do |cur_user| %>
   <tr>
@@ -33,8 +48,8 @@ with that id --->
     <td><%= cur_user.gender %></td>
     <td><%= cur_user.height_in_inches%></td>
     <td><%= cur_user.weight_in_pounds %></td>
-
-
+    <td><%= cur_user.phone_number %></td>
+    <td><%= link_to 'Message', create_sms_per_person_path(cur_user) %></td> 
   </tr>
 <% end %>
 </table>
@@ -49,6 +64,6 @@ with that id --->
   <% end %>
 
     <%= link_to 'Back', groups_path %> |
-    <%= link_to 'Join', join_group_path(@group) %> |
-    <%= link_to 'Leave', leave_group_path(@group) %>
+    <%= link_to 'Join', join_group_path(@group) , :data => {:confirm => 'Are you sure?'}%> |
+    <%= link_to 'Leave', leave_group_path(@group) , :data => {:confirm => 'Are you sure?'} %>
 </div>

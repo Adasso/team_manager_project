@@ -34,10 +34,10 @@
     </div>
     <div class="panel-body">
       <ul class="list-group">
-        <li class="list-group-item">Create/Update Profile</li>
-        <li class="list-group-item">Join a team</li>
+        <li class="list-group-item"><%= link_to 'Create/Update Profile', edit_user_registration_path %></li>
+        <li class="list-group-item"><%= link_to 'Join a team', groups_path %></li>
         <li class="list-group-item">Pick up uniform</li>
-        <li class="list-group-item">Check practice schedule</li>
+        <li class="list-group-item"><%= link_to 'Check practice schedule', schedules_path %></li>
         <li class="list-group-item">Ready to start!</li>
       </ul>
   </div>

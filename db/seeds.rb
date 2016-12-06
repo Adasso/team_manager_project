@@ -254,3 +254,10 @@ user15.group_id = "6"
 user15.add_role "user"
 user15.phone_number=" 5052369592"
 user15.save
+
+event1 = Meeting.new
+event1.name = "Warm-up match"
+event1.start_time = DateTime.parse("2016-12-05 8:00")
+event1.end_time = DateTime.parse("2016-12-12 17:00")
+
+

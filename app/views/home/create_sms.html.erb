@@ -1,6 +1,20 @@
 <% @group_id = params[:id] %>
 
-<div class="panel panel-default">
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Team Rocket
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'home/navbar' %>
+
+<div class="center panel panel-default">
   <div class="panel-header">
     TWILIO Demo - Prototype 1
   </div>
@@ -39,7 +53,7 @@
 
 
 
-<h1> Prototype 2 message will be sent to: </h1>
+<h2> Prototype 2 message will be sent to: </h2>
 <table class="centertable">
   <tr>
     <th> Name </th>
@@ -54,7 +68,7 @@
 </table>
 
 
-<div class="panel panel-default">
+<div class="center panel panel-default">
   <div class="panel-header">
     TWILIO Demo - Prototype 2
   </div>
@@ -73,6 +87,7 @@
 
 
 
-
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+<div class="center">
+  <%= link_to 'Show', @group %> |
+  <%= link_to 'Back', groups_path %>
+</div>

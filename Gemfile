@@ -56,3 +56,4 @@ gem 'twilio-ruby'
 # Added by AlexH
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'owlcarousel-rails'

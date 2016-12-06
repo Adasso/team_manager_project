@@ -17,3 +17,6 @@
 // Added by AlexH
 //= require bootstrap-sprockets
 //= require_tree .
+//= require owl.carousel
+
+$(".owl-carousel").owlCarousel();

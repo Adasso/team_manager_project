@@ -1,0 +1,27 @@
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Send SMS
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'home/navbar' %>
+
+
+<% @user_id = params[:id] %>
+<% user_info = User.where("id = ?",@user_id) %> <!--- Query to search for all people having same group id, Naga--->
+<h2>Send sms to: <%= user_info[0].last_name%></h2><br/>
+
+<div class="center">
+	<%= form_tag('/send_per_person_sms', method: 'POST') do %>
+		  <input type="hidden" value=<%= user_info[0].phone_number%> name="number" >
+		  <td><input type="text" placeholder="enter message here" name="message"></td>
+		  <td><button type="submit">Send</button></td>
+	  </tr>
+	<% end %>
+</div>

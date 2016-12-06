@@ -1,0 +1,27 @@
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Messages
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'home/navbar' %>
+
+<div class="panel panel-default">
+  <div class="panel-header">
+    TWILIO Demo - Prototype 1
+  </div>
+  <div class="panel-body">
+    <!--- Added by vj ---->
+    <%= form_tag('/send_sms', method: 'POST') do %>
+        <input type="text" placeholder="enter number" name="number">
+        <input type="text" placeholder="enter message here" name="message">
+        <button type="submit">Submit</button>
+    <% end %>
+  </div>
+</div>

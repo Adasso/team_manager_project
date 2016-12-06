@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Team Members
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'home/navbar' %>
+
+<div class="center">
+  <p>
+    <strong>Team Name:</strong>
+    <%= @group.name %>
+  </p>
+
+
+<!--- Using @goup.id I would like to have an object that contains all people
+with that id --->
+<!---pujitha--->
+<% @cur_users = User.where("group_id = ?",@group.id) %> <!--- Query to search for all people having same group id --->
+<table class="centertable">
+  <tr>
+    <th> ID </th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Height(in)</th>
+    <th>Weight(lbs)</th>
+    <th>Phone number </th>
+    <th>Message?</th>
+  </tr>
+<% @cur_users.each do |cur_user| %>
+  <tr>
+    <td><%= cur_user.id %></td>
+    <td><%= cur_user.first_name %></td>
+    <td><%= cur_user.last_name %></td>
+    <td><%= cur_user.email %></td>
+    <td><%= cur_user.date_of_birth%></td>
+    <td><%= cur_user.gender %></td>
+    <td><%= cur_user.height_in_inches%></td>
+    <td><%= cur_user.weight_in_pounds %></td>
+    <td><%= cur_user.phone_number %></td>
+    <td><%= link_to 'Message', create_sms_per_person_path(cur_user) %></td> 
+  </tr>
+<% end %>
+</table>
+
+
+
+
+
+
+  <% if current_user.has_role?(:admin) %>
+    <%= link_to 'Edit', edit_group_path(@group) %> |
+  <% end %>
+
+    <%= link_to 'Back', groups_path %> |
+    <%= link_to 'Join', join_group_path(@group) , :data => {:confirm => 'Are you sure?'}%> |
+    <%= link_to 'Leave', leave_group_path(@group) , :data => {:confirm => 'Are you sure?'} %>
+</div>

@@ -1,0 +1,19 @@
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <h1>Team Manager
+        <small>
+          Schedules
+        </small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'home/navbar' %>
+<%= month_calendar(attribute: :starts_at) do |date| %>
+  <%= date %>
+<% end %>
+
+
+

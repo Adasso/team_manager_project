@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :meetings
+  resources :groups do
+    member do
+      get 'join'
+      get 'leave'
+    end
+  end
   resources :people
   #devise_scope :user do
   #  root to: "devise/sessions#new"
@@ -17,8 +24,7 @@ Rails.application.routes.draw do
     root :to => "home#index"
   end
 
-  
-  
+
   root :to => redirect("/users/sign_in")
 
   devise_for :users, :controllers => { registrations: 'registrations' }
@@ -26,9 +32,13 @@ Rails.application.routes.draw do
 
   # Added by vj
   post '/send_sms' => 'home#send_sms'
+  post '/send_group_sms' => 'home#send_group_sms'
+  post '/send_per_person_sms' => 'groups#send_per_person_sms'
 
   get 'messages', to: 'home#messages'
-  get 'teams', to: 'home#teams'
-  get 'schedule', to: 'home#schedule'
+  get '/home/create_sms/:id', to: 'home#create_sms', as: 'create_sms'
+  get '/groups/create_sms_per_person/:id', to: 'groups#create_sms_per_person', as: 'create_sms_per_person'
+  get 'schedules', to: 'home#schedules'
   get 'statistics', to: 'home#statistics'
+
 end

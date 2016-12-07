@@ -51,7 +51,7 @@ pineapple.passing_accuracy = 3
 pineapple.goals = 3
 pineapple.yellow_cards = 3
 pineapple.red_cards = 3
-pineaple.group_id = 2
+pineapple.group_id = 2
 pineapple.save
 
 banana = Teamstat.new

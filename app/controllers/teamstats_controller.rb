@@ -9,7 +9,7 @@ class TeamstatsController < ApplicationController
   end
 
   def new
-    @@team_stats = Teamstats.new
+    @team_stat = Teamstat.new
   end
 
 end

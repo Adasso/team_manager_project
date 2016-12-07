@@ -10,7 +10,7 @@ coconut = Group.new
 coconut.name = "Team Coconut"
 coconut.save
 
-coconut = TeamStats.new
+coconut = Teamstats.new
 coconut.games_played = 10
 coconut.average_possesion = 3
 coconut.offsides = 3
@@ -26,7 +26,7 @@ pineapple = Group.new
 pineapple.name = "Team Pineapple"
 pineapple.save
 
-pineapple = TeamStats.new
+pineapple = Teamstats.new
 pineapple.games_played = 10
 pineapple.average_possesion = 3
 pineapple.offsides = 3
@@ -42,7 +42,7 @@ banana = Group.new
 banana.name = "Team Banana"
 banana.save
 
-banana = TeamStats.new
+banana = Teamstats.new
 banana.games_played = 10
 banana.average_possesion = 3
 banana.offsides = 3
@@ -74,7 +74,7 @@ watermelon = Group.new
 watermelon.name = "Team Watermelon"
 watermelon.save
 
-watermelon = TeamStats.new
+watermelon = Teamstats.new
 watermelon.games_played = 10
 watermelon.average_possesion = 3
 watermelon.offsides = 3
@@ -90,7 +90,7 @@ rocket = Group.new
 rocket.name = "Team Rocket"
 rocket.save
 
-rocket = TeamStats.new
+rocket = Teamstats.new
 rocket.games_played = 10
 rocket.average_possesion = 3
 rocket.offsides = 3

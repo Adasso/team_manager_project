@@ -7,4 +7,9 @@ class TeamstatsController < ApplicationController
     #@group = Group.find(params[:id])
     #@teamstats = @group.teamstats
   end
+
+  def new
+    @@team_stats = TeamStats.new
+  end
+
 end

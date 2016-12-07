@@ -58,7 +58,7 @@ peach = Group.new
 peach.name = "Team Peach"
 peach.save
 
-peach = TeamStats.new
+peach = Teamstats.new
 peach.games_played = 10
 peach.average_possesion = 3
 peach.offsides = 3

@@ -1,6 +1,6 @@
 class TeamstatsController < ApplicationController
   def index
-    @team_stats = TeamStats.all
+    @team_stats = Teamstats.all
   end
 
   def show
@@ -9,7 +9,7 @@ class TeamstatsController < ApplicationController
   end
 
   def new
-    @@team_stats = TeamStats.new
+    @@team_stats = Teamstats.new
   end
 
 end

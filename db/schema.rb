@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206003137) do
+ActiveRecord::Schema.define(version: 20161207023258) do
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +34,21 @@ ActiveRecord::Schema.define(version: 20161206003137) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["name"], name: "index_roles_on_name"
+  end
+
+  create_table "teamstats", force: :cascade do |t|
+    t.integer  "games_played"
+    t.integer  "average_possesion"
+    t.integer  "offsides"
+    t.integer  "goals_conceded"
+    t.integer  "passing_accuracy"
+    t.integer  "goals"
+    t.integer  "yellow_cards"
+    t.integer  "red_cards"
+    t.integer  "group_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["group_id"], name: "index_teamstats_on_group_id"
   end
 
   create_table "users", force: :cascade do |t|

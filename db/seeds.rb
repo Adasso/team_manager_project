@@ -8,74 +8,74 @@
 
 coconut = Group.new
 coconut.name = "Team Coconut"
-coconut.games_played = "10"
-coconut.average_possesion = "3"
-coconut.offsides = "3"
-coconut.goals_conceded = "3"
-coconut.passing_accuracy = "3"
-coconut.goals = "3"
-coconut.yellow_cards = "3"
-coconut.red_cards = "3"
+coconut.games_played = 10
+coconut.average_possesion = 3
+coconut.offsides = 3
+coconut.goals_conceded = 3
+coconut.passing_accuracy = 3
+coconut.goals = 3
+coconut.yellow_cards = 3
+coconut.red_cards = 3
 coconut.save
 
 pineapple = Group.new
 pineapple.name = "Team Pineapple"
-pineapple.games_played = "10"
-pineapple.average_possesion = "3"
-pineapple.offsides = "3"
-pineapple.goals_conceded = "3"
-pineapple.passing_accuracy = "3"
-pineapple.goals = "3"
-pineapple.yellow_cards = "3"
-pineapple.red_cards = "3"
+pineapple.games_played = 10
+pineapple.average_possesion = 3
+pineapple.offsides = 3
+pineapple.goals_conceded = 3
+pineapple.passing_accuracy = 3
+pineapple.goals = 3
+pineapple.yellow_cards = 3
+pineapple.red_cards = 3
 pineapple.save
 
 banana = Group.new
 banana.name = "Team Banana"
-banana.games_played = "10"
-banana.average_possesion = "3"
-banana.offsides = "3"
-banana.goals_conceded = "3"
-banana.passing_accuracy = "3"
-banana.goals = "3"
-banana.yellow_cards = "3"
-banana.red_cards = "3"
+banana.games_played = 10
+banana.average_possesion = 3
+banana.offsides = 3
+banana.goals_conceded = 3
+banana.passing_accuracy = 3
+banana.goals = 3
+banana.yellow_cards = 3
+banana.red_cards = 3
 banana.save
 
 peach = Group.new
 peach.name = "Team Peach"
-peach.games_played = "10"
-peach.average_possesion = "3"
-peach.offsides = "3"
-peach.goals_conceded = "3"
-peach.passing_accuracy = "3"
-peach.goals = "3"
-peach.yellow_cards = "3"
-peach.red_cards = "3"
+peach.games_played = 10
+peach.average_possesion = 3
+peach.offsides = 3
+peach.goals_conceded = 3
+peach.passing_accuracy = 3
+peach.goals = 3
+peach.yellow_cards = 3
+peach.red_cards = 3
 peach.save
 
 watermelon = Group.new
 watermelon.name = "Team Watermelon"
-watermelon.games_played = "10"
-watermelon.average_possesion = "3"
-watermelon.offsides = "3"
-watermelon.goals_conceded = "3"
-watermelon.passing_accuracy = "3"
-watermelon.goals = "3"
-watermelon.yellow_cards = "3"
-watermelon.red_cards = "3"
+watermelon.games_played = 10
+watermelon.average_possesion = 3
+watermelon.offsides = 3
+watermelon.goals_conceded = 3
+watermelon.passing_accuracy = 3
+watermelon.goals = 3
+watermelon.yellow_cards = 3
+watermelon.red_cards = 3
 watermelon.save
 
 rocket = Group.new
 rocket.name = "Team Rocket"
-rocket.games_played = "10"
-rocket.average_possesion = "3"
-rocket.offsides = "3"
-rocket.goals_conceded = "3"
-rocket.passing_accuracy = "3"
-rocket.goals = "3"
-rocket.yellow_cards = "3"
-rocket.red_cards = "3"
+rocket.games_played = 10
+rocket.average_possesion = 3
+rocket.offsides = 3
+rocket.goals_conceded = 3
+rocket.passing_accuracy = 3
+rocket.goals = 3
+rocket.yellow_cards = 3
+rocket.red_cards = 3
 rocket.save
 
 admin = User.new

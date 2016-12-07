@@ -40,5 +40,7 @@ Rails.application.routes.draw do
   get '/groups/create_sms_per_person/:id', to: 'groups#create_sms_per_person', as: 'create_sms_per_person'
   get 'schedules', to: 'home#schedules'
   get 'statistics', to: 'home#statistics'
+    get 'teamstats', to: 'teamstats#show'
+
 
 end

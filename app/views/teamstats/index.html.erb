@@ -3,17 +3,15 @@
     <div class="col-sm-offset-1">
       <h1>Team Manager
         <small>
-          Statistics
+          Teams
         </small>
       </h1>
     </div>
   </div>
 </div>
 
-<!-- <h1>Meetings</h1> -->
 <%= render 'home/navbar' %>
 
-<% @groups = Group.all %> <!--- Query to search for all people having same group id --->
 <h2>Teams</h2>
 <table class="centertable">
   <thead>
@@ -26,10 +24,21 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= link_to group.name, teamstats_path %></td>
+        <td><%= group.name %></td>
+        <td><%= link_to 'Show', group %></td>
 
-          <!-- <td><%= link_to 'Statistics', create_sms_path(group) %></td> -->
+        <% if current_user.has_role?(:admin) %>
+          <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <% end %>
+
+        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<div class="center">
+  <%= link_to 'New Team', new_group_path %>
+</div>

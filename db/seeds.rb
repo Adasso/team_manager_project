@@ -10,7 +10,27 @@ coconut = Group.new
 coconut.name = "Team Coconut"
 coconut.save
 
-coconut = Teamstats.new
+pineapple = Group.new
+pineapple.name = "Team Pineapple"
+pineapple.save
+
+banana = Group.new
+banana.name = "Team Banana"
+banana.save
+
+peach = Group.new
+peach.name = "Team Peach"
+peach.save
+
+watermelon = Group.new
+watermelon.name = "Team Watermelon"
+watermelon.save
+
+rocket = Group.new
+rocket.name = "Team Rocket"
+rocket.save
+
+coconut = Teamstat.new
 coconut.games_played = 10
 coconut.average_possesion = 3
 coconut.offsides = 3
@@ -19,30 +39,10 @@ coconut.passing_accuracy = 3
 coconut.goals = 3
 coconut.yellow_cards = 3
 coconut.red_cards = 3
-coconut.group = 1
+coconut.group_id = 1
 coconut.save
 
-pineapple = Group.new
-pineapple.name = "Team Pineapple"
-pineapple.save
-
-pineapple = Teamstats.new
-pineapple.games_played = 10
-pineapple.average_possesion = 3
-pineapple.offsides = 3
-pineapple.goals_conceded = 3
-pineapple.passing_accuracy = 3
-pineapple.goals = 3
-pineapple.yellow_cards = 3
-pineapple.red_cards = 3
-pineaple.group = 2
-pineapple.save
-
-banana = Group.new
-banana.name = "Team Banana"
-banana.save
-
-banana = Teamstats.new
+banana = Teamstat.new
 banana.games_played = 10
 banana.average_possesion = 3
 banana.offsides = 3
@@ -51,14 +51,22 @@ banana.passing_accuracy = 3
 banana.goals = 3
 banana.yellow_cards = 3
 banana.red_cards = 3
-banana.group = 3
+banana.group_id = 3
 banana.save
 
-peach = Group.new
-peach.name = "Team Peach"
-peach.save
+pineapple = Teamstat.new
+pineapple.games_played = 10
+pineapple.average_possesion = 3
+pineapple.offsides = 3
+pineapple.goals_conceded = 3
+pineapple.passing_accuracy = 3
+pineapple.goals = 3
+pineapple.yellow_cards = 3
+pineapple.red_cards = 3
+pineaple.group_id = 2
+pineapple.save
 
-peach = Teamstats.new
+peach = Teamstat.new
 peach.games_played = 10
 peach.average_possesion = 3
 peach.offsides = 3
@@ -67,14 +75,10 @@ peach.passing_accuracy = 3
 peach.goals = 3
 peach.yellow_cards = 3
 peach.red_cards = 3
-peach.group = 4
+peach.group_id = 4
 peach.save
 
-watermelon = Group.new
-watermelon.name = "Team Watermelon"
-watermelon.save
-
-watermelon = Teamstats.new
+watermelon = Teamstat.new
 watermelon.games_played = 10
 watermelon.average_possesion = 3
 watermelon.offsides = 3
@@ -83,14 +87,10 @@ watermelon.passing_accuracy = 3
 watermelon.goals = 3
 watermelon.yellow_cards = 3
 watermelon.red_cards = 3
-watermelon.group = 5
+watermelon.group_id = 5
 watermelon.save
 
-rocket = Group.new
-rocket.name = "Team Rocket"
-rocket.save
-
-rocket = Teamstats.new
+rocket = Teamstat.new
 rocket.games_played = 10
 rocket.average_possesion = 3
 rocket.offsides = 3
@@ -99,7 +99,7 @@ rocket.passing_accuracy = 3
 rocket.goals = 3
 rocket.yellow_cards = 3
 rocket.red_cards = 3
-rocket. group = 6
+rocket. group_id = 6
 rocket.save
 
 admin = User.new

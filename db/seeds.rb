@@ -42,18 +42,6 @@ coconut.red_cards = 3
 coconut.group_id = 1
 coconut.save
 
-banana = Teamstat.new
-banana.games_played = 10
-banana.average_possesion = 3
-banana.offsides = 3
-banana.goals_conceded = 3
-banana.passing_accuracy = 3
-banana.goals = 3
-banana.yellow_cards = 3
-banana.red_cards = 3
-banana.group_id = 3
-banana.save
-
 pineapple = Teamstat.new
 pineapple.games_played = 10
 pineapple.average_possesion = 3
@@ -65,6 +53,18 @@ pineapple.yellow_cards = 3
 pineapple.red_cards = 3
 pineaple.group_id = 2
 pineapple.save
+
+banana = Teamstat.new
+banana.games_played = 10
+banana.average_possesion = 3
+banana.offsides = 3
+banana.goals_conceded = 3
+banana.passing_accuracy = 3
+banana.goals = 3
+banana.yellow_cards = 3
+banana.red_cards = 3
+banana.group_id = 3
+banana.save
 
 peach = Teamstat.new
 peach.games_played = 10

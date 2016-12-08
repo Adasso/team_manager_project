@@ -16,7 +16,7 @@
 
   <div class="center">
 
-    <table class="centertable">
+    <table class="table">
       <tr>
         <th>Team</th>
         <th>Games Played </th>
@@ -30,7 +30,7 @@
       </tr>
     <% @groupstats.each do |groupstat| %>
       <tr>
-        <td><%= groupstat.group_id %></td>
+        <td><%= groupstat.group.name %></td>
         <td><%= groupstat.games_played %></td>
         <td><%= groupstat.average_possesion %></td>
         <td><%= groupstat.offsides %></td>

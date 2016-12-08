@@ -1,6 +1,8 @@
 class TeamstatsController < ApplicationController
+
   def index
-    @team_stats = Teamstats.all
+    @groups = Group.all
+    @groupstats = Teamstat.all
   end
 
   def show

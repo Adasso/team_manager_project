@@ -49,7 +49,7 @@ with that id --->
     <td><%= cur_user.height_in_inches%></td>
     <td><%= cur_user.weight_in_pounds %></td>
     <td><%= cur_user.phone_number %></td>
-    <td><%= link_to 'Message', create_sms_per_person_path(cur_user) %></td> 
+    <td><%= link_to 'Message', create_sms_per_person_path(cur_user) %></td>
   </tr>
 <% end %>
 </table>
@@ -63,7 +63,7 @@ with that id --->
     <%= link_to 'Edit', edit_group_path(@group) %> |
   <% end %>
 
-    <%= link_to 'Back', groups_path %> |
+    <%= link_to 'Back', request.referer.present? ? request.referer : default_path %> |
     <%= link_to 'Join', join_group_path(@group) , :data => {:confirm => 'Are you sure?'}%> |
     <%= link_to 'Leave', leave_group_path(@group) , :data => {:confirm => 'Are you sure?'} %>
 </div>

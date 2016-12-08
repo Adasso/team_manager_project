@@ -6,6 +6,7 @@ class TeamstatsController < ApplicationController
   end
 
   def show
+    @group = Group.find params[:id]
     @groupstats = Teamstat.all
     #@group = Group.find(params[:id])
     #@teamstats = @group.teamstats

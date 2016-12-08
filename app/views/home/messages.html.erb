@@ -17,12 +17,6 @@
 <% @groups = Group.all %> <!--- Query to search for all people having same group id --->
 <h2>Teams</h2>
 <table class="centertable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @groups.each do |group| %>

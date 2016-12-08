@@ -25,9 +25,10 @@
 
         <% if current_user.has_role?(:admin) %>
           <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <% end %>
 
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -35,6 +36,8 @@
 
 <br>
 
-<div class="center">
-  <%= link_to 'New Team', new_group_path %>
-</div>
+<% if current_user.has_role?(:admin) %>
+  <div class="center">
+    <%= link_to 'New Team', new_group_path %>
+  </div>
+<% end %>

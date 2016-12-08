@@ -113,6 +113,7 @@ admin.height_in_inches = "67"
 admin.weight_in_pounds = "150"
 admin.group_id = "4"
 admin.add_role "admin"
+admin.phone_number="5059087231"
 admin.save
 
 user1 = User.new
@@ -126,6 +127,7 @@ user1.height_in_inches = "68"
 user1.weight_in_pounds = "160"
 user1.group_id = "2"
 user1.add_role "user"
+user1.phone_number="5059083461"
 user1.save
 
 user2 = User.new
@@ -139,6 +141,7 @@ user2.height_in_inches = "68"
 user2.weight_in_pounds = "160"
 user2.group_id = "3"
 user2.add_role "user"
+user2.phone_number="5059087275"
 user2.save
 
 user3 = User.new
@@ -152,6 +155,7 @@ user3.height_in_inches = "68"
 user3.weight_in_pounds = "160"
 user3.group_id = "3"
 user3.add_role "user"
+user3.phone_number="5059087343"
 user3.save
 
 
@@ -166,6 +170,7 @@ user4.height_in_inches = "68"
 user4.weight_in_pounds = "160"
 user4.group_id = "2"
 user4.add_role "user"
+user4.phone_number="5059087369"
 user4.save
 
 
@@ -181,6 +186,7 @@ user5.height_in_inches = "68"
 user5.weight_in_pounds = "160"
 user5.group_id = "4"
 user5.add_role "user"
+user5.phone_number="5059087364"
 user5.save
 
 
@@ -195,6 +201,7 @@ user6.height_in_inches = "68"
 user6.weight_in_pounds = "160"
 user6.group_id = "1"
 user6.add_role "user"
+user6.phone_number="5059087363"
 user6.save
 
 
@@ -210,6 +217,7 @@ user7.height_in_inches = "68"
 user7.weight_in_pounds = "160"
 user7.group_id = "1"
 user7.add_role "user"
+user7.phone_number="5059087368"
 user7.save
 
 
@@ -225,7 +233,7 @@ user8.height_in_inches = "68"
 user8.weight_in_pounds = "160"
 user8.group_id = "5"
 user8.add_role "user"
-user8.phone_number="5059087361"
+user8.phone_number="5059087362"
 user8.save
 
 
@@ -240,7 +248,7 @@ user9.height_in_inches = "98"
 user9.weight_in_pounds = "150"
 user9.group_id = "5"
 user9.add_role "user"
-user9.phone_number="5059087361"
+user9.phone_number="5059087365"
 user9.save
 
 user10 = User.new

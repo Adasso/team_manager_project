@@ -84,5 +84,5 @@
 
 <div class="center">
   <%= link_to 'Show', @group %> |
-  <%= link_to 'Back', groups_path %>
+  <%= link_to 'Back', request.referer.present? ? request.referer : default_path %>
 </div>

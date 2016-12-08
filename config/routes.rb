@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :meetings
   resources :groups do
     member do
       get 'join'
       get 'leave'
     end
   end
-  resources :people
+  resources :home
+  resources :meetings
+  resources :teamstats
   #devise_scope :user do
   #  root to: "devise/sessions#new"
   #end
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   #def after_sign_out_path_for(resource_or_scope)
     # your_path
   #end
-  resources :home
+
 
   authenticated :user do
     root :to => "home#index"
@@ -39,8 +40,6 @@ Rails.application.routes.draw do
   get '/home/create_sms/:id', to: 'home#create_sms', as: 'create_sms'
   get '/groups/create_sms_per_person/:id', to: 'groups#create_sms_per_person', as: 'create_sms_per_person'
   get 'schedules', to: 'home#schedules'
-  get 'statistics', to: 'home#statistics'
-    get 'teamstats', to: 'teamstats#show'
 
 
 end

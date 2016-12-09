@@ -18,7 +18,7 @@ end
     @message = @client.account.messages.create({:to => "+1"+"#{number}",
                                                 :from => "+15057388535",
                                                 :body => "#{message}"})
-    redirect_to '/'
+    redirect_to '/', :flash => { :notice => "Message sent successfully." }
   end
 
 
@@ -31,7 +31,7 @@ end
     ph_array = numbers.split(',')
     ph_array.each do |number|
       @client = Twilio::REST::Client.new account_sid, auth_token
-          
+
       @message = @client.account.messages.create({:to => "+1"+"#{number}",
                                                 :from => "+15057388535",
                                                 :body => "#{message}"})
@@ -41,7 +41,7 @@ end
     #@message = @client.account.messages.create({:to => "+1"+"#{number}",
     #                                            :from => "+15057388535",
     #                                            :body => "#{message}"})
-    #redirect_to '/'
+    redirect_to '/', :flash => { :notice => "Message sent successfully." }
   end
 
 end

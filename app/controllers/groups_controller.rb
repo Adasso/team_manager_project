@@ -26,7 +26,9 @@ class GroupsController < ApplicationController
     @message = @client.account.messages.create({:to => "+1"+"#{number}",
                                                 :from => "+15057388535",
                                                 :body => "#{message}"})
-    redirect_to '/'
+
+    redirect_to '/', :flash => { :notice => "Message sent successfully." }
+
   end
 
 

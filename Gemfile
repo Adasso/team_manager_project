@@ -10,17 +10,17 @@ gem "simple_calendar", "~> 2.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+#gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
+# Use Uglifier as compressor for JavaScript asset
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
+# See https://github.com/rails/execjs#readme for more supported runtimesr
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
@@ -50,7 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'sqlite3'
+  #gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

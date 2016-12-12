@@ -16,6 +16,7 @@ class TeamstatsController < ApplicationController
 
   def new
     @team_stat = Teamstat.new
+    authorize @meeting
   end
 
 end

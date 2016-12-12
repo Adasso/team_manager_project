@@ -18,17 +18,19 @@ class MeetingsController < ApplicationController
   # GET /meetings/new
   def new
     @meeting = Meeting.new
+    authorize @meeting
   end
 
   # GET /meetings/1/edit
   def edit
+    authorize @meeting
   end
 
   # POST /meetings
   # POST /meetings.json
   def create
     @meeting = Meeting.new(meeting_params)
-
+    authorize @meeting
     respond_to do |format|
       if @meeting.save
         format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
@@ -43,6 +45,7 @@ class MeetingsController < ApplicationController
   # PATCH/PUT /meetings/1
   # PATCH/PUT /meetings/1.json
   def update
+    authorize @meeting
     respond_to do |format|
       if @meeting.update(meeting_params)
         format.html { redirect_to @meeting, notice: 'Meeting was successfully updated.' }
@@ -57,6 +60,7 @@ class MeetingsController < ApplicationController
   # DELETE /meetings/1
   # DELETE /meetings/1.json
   def destroy
+    authorize @meeting
     @meeting.destroy
     respond_to do |format|
       format.html { redirect_to meetings_url, notice: 'Meeting was successfully destroyed.' }

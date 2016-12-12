@@ -56,6 +56,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
+    authorize @group
   end
 
   # POST /groups

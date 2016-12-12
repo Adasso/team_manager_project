@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
+  #!--- Added by AlvaroD ----#
+    before_filter :authenticate_user!
 
   # GET /groups
   # GET /groups.json

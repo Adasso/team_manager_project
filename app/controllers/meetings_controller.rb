@@ -1,6 +1,9 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
+  #!--- Added by AlvaroD ----#
+    before_filter :authenticate_user!
+
   # GET /meetings
   # GET /meetings.json
   def index

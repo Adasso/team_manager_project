@@ -1,4 +1,6 @@
 class TeamstatsController < ApplicationController
+  #!--- Added by AlvaroD ----#
+    before_filter :authenticate_user!
 
   def index
     @groups = Group.all

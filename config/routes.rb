@@ -40,6 +40,6 @@ Rails.application.routes.draw do
   get '/home/create_sms/:id', to: 'home#create_sms', as: 'create_sms'
   get '/groups/create_sms_per_person/:id', to: 'groups#create_sms_per_person', as: 'create_sms_per_person'
   get 'schedules', to: 'home#schedules'
-
+  get 'gallery', to: 'home#gallery'
 
 end

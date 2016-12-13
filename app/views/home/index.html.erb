@@ -23,13 +23,16 @@
           <h3 class="panel-title">Announcements</h3>
         </div>
         <div class="panel-body">
-          <ul class="list-group">
-            <li class="list-group-item">2017 Soccer Season Begins August 1st!</li>
-            <li class="list-group-item">Statistics have been updated from 2015 season.  Check them out!</li>
-            <li class="list-group-item">Photos have been added from the Tournament!</li>
-            <li class="list-group-item">Championship Game is November 8th, 2016.</li>
-            <li class="list-group-item">Tournament begins October 15th.</li>
-          </ul>
+          <table class="table table-striped">
+            <tbody>
+              <tr><td>2017 Soccer Season Begins August 1st!</td></tr>
+              <tr><td>Statistics have been updated from 2015 season.  Check them out!</td></tr>
+              <tr><td>Photos have been added from the Tournament!</td></tr>
+              <tr><td>Championship Game is November 8th, 2016.</td></tr>
+              <tr><td>Tournament begins October 15th.</td></tr>
+              <tr><td>Season banquet will be on November 30th at 8pm.</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -39,13 +42,16 @@
           <h3 class="panel-title">TODO List Before Season Begins</h3>
         </div>
         <div class="panel-body">
-          <ul class="list-group">
-            <li class="list-group-item"><%= link_to 'Create/Update Profile', edit_user_registration_path %></li>
-            <li class="list-group-item"><%= link_to 'Join a team', groups_path %></li>
-            <li class="list-group-item">Pick up uniform</li>
-            <li class="list-group-item"><%= link_to 'Check practice schedule', schedules_path %></li>
-            <li class="list-group-item">Ready to start!</li>
-          </ul>
+          <table class="table table-striped">
+            <tbody>
+            <tr><td><%= link_to 'Create/Update Profile', edit_user_registration_path %></td></tr>
+            <tr><td>View membership policies prior to joining a team.</td></tr>
+            <tr><td><%= link_to 'Join a team', groups_path %></td></tr>
+            <tr><td>Pick up uniform</td></tr>
+            <tr><td><%= link_to 'Check practice schedule', schedules_path %></td></tr>
+            <tr><td>Ready to start!</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

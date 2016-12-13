@@ -21,10 +21,10 @@
       <tr>
         <th>Team</th>
         <th>Games Played </th>
-        <th>Average Possession</th>
+        <th>Average Possession %</th>
         <th>Offsides</th>
         <th>Goals Conceded</th>
-        <th>Passing Accuracy</th>
+        <th>Passing Accuracy %</th>
         <th>Goals</th>
         <th>Yellow Cards</th>
         <th>Red Cards</th>
@@ -42,4 +42,25 @@
         <td><%= groupstat.red_cards %></td>
 
     <% end %>
+
+    <table class="centertable eventable">
+      <tr>
+        <th>Player</th>
+        <th>Games Played </th>
+        <th>Minutes Played</th>
+        <th>Goals</th>
+        <th>Yellow Cards</th>
+        <th>Red Cards</th>
+      </tr>
+      <% @userstats.each do |userstat| %>
+        <tr>
+          <td class="left"><%= link_to userstat.user.first_name, userstat_path(userstat.user_id) %></td>
+          <td><%= userstat.games_played %></td>
+          <td><%= userstat.minutes_played %></td>
+          <td><%= userstat.goals %></td>
+          <td><%= userstat.yellow_cards %></td>
+          <td><%= userstat.red_cards %></td>
+
+      <% end %>
+
     </table>

@@ -13,10 +13,10 @@
     </div>
   </div>
 </head>
-<%= render 'home/navbar' %>
-<p id="notice"><%= notice %></p>
-  <div class="center">
 
+<%= render 'home/navbar' %>
+
+<<<<<<< HEAD
     <table class="centertable eventable">
       <tr>
         <th>Team</th>
@@ -64,3 +64,42 @@
       <% end %>
 
     </table>
+=======
+<div class="row col-xs-offset-1 col-xs-10">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Team Statistics</h3>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>Team</th>
+            <th>Games Played </th>
+            <th>Average Possession</th>
+            <th>Offsides</th>
+            <th>Goals Conceded</th>
+            <th>Passing Accuracy</th>
+            <th>Goals</th>
+            <th>Yellow Cards</th>
+            <th>Red Cards</th>
+          </tr>
+          <% @groupstats.each do |groupstat| %>
+          <tr>
+            <td class="left"><%= link_to groupstat.group.name, group_path(groupstat.group_id) %></td>
+            <td><%= groupstat.games_played %></td>
+            <td><%= groupstat.average_possesion %></td>
+            <td><%= groupstat.offsides %></td>
+            <td><%= groupstat.goals_conceded %></td>
+            <td><%= groupstat.passing_accuracy %></td>
+            <td><%= groupstat.goals %></td>
+            <td><%= groupstat.yellow_cards %></td>
+            <td><%= groupstat.red_cards %></td>
+
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+>>>>>>> c114222cd92e7ba78e0c76cf80d8feeafeb8494e

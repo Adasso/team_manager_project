@@ -1,84 +1,90 @@
-<div class="center login">
-  <h2>Sign up</h2>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+<div class="login">
+  <div class="col-xs-offset-3 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sign Up</h3>
+      </div>
+      <div class="panel-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="col-xs-6">
 
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
+              <div class="field">
+                <br />
+                <%= f.label :first_name %><br />
+                <%= f.text_field :first_name %>
+              </div>
+              <div class="field">
+                <br />
+                <%= f.label :gender %><br />
+                <%= f.text_field :gender %>
+              </div>
+
+              <div class="field">
+                <br />
+                <%= f.label "Weight" %><br />
+                <%= f.number_field :weight_in_pounds %>
+                <br />
+                <i>(lbs)</i>
+              </div>
+              <div class="field">
+                </br>
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true %>
+              </div>
+              <div class="field">
+                <br />
+                <%= f.label "Phone" %><br />
+                <%= f.phone_field :phone_number %>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="field">
+                <br />
+                <%= f.label :last_name %><br />
+                <%= f.text_field :last_name %>
+              </div>
+              <div class="field">
+                <br />
+                <%= f.label "Birthdate" %><br />
+                <%= f.date_field :date_of_birth %>
+              </div>
+
+              <div class="field">
+                <br />
+                <%= f.label "Height" %><br />
+                <%= f.number_field :height_in_inches %>
+                <br />
+                <i>(inches)</i>
+              </div>
+              <div class="field">
+                <br />
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+              <div class="field">
+                <br />
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+            </div>
+            <div class="col-xs-offset-4">
+              <div class="field">
+                <br />
+                <%=  f.hidden_field :group_id, :value => "1" %>
+              </div>
+
+              <div class="actions">
+                <br />
+                <%= f.submit "Sign up" %>
+              </div>
+              </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
-
-    <div class="field">
-      <br />
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label :gender %>
-      <%= f.text_field :gender %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label "Phone" %>
-      <%= f.phone_field :phone_number %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label "Birthdate" %>
-      <%= f.date_field :date_of_birth %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label "Height" %>
-      <%= f.number_field :height_in_inches %>
-      <br />
-      <i>(inches)</i>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label "Weight" %>
-      <%= f.number_field :weight_in_pounds %>
-      <br />
-      <i>(lbs)</i>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <br />
-      <%=  f.hidden_field :group_id, :value => "1" %>
-    </div>
-
-    <div class="actions">
-      <br />
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+  </div>
 </div>

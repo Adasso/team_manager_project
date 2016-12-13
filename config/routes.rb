@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :userstats
   resources :groups do
     member do
       get 'join'

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Games played:</strong>
+  <%= @userstat.games_played %>
+</p>
+
+<p>
+  <strong>Minutes played:</strong>
+  <%= @userstat.minutes_played %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @userstat.goals %>
+</p>
+
+<p>
+  <strong>Yellow cards:</strong>
+  <%= @userstat.yellow_cards %>
+</p>
+
+<p>
+  <strong>Red cards:</strong>
+  <%= @userstat.red_cards %>
+</p>
+
+<%= link_to 'Edit', edit_userstat_path(@userstat) %> |
+<%= link_to 'Back', userstats_path %>

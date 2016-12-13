@@ -53,3 +53,35 @@
     </div>
   </div>
 </div>
+
+<div class="row col-xs-offset-1 col-xs-10">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Player Statistics</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th>Player</th>
+              <th>Games Played </th>
+              <th>Minutes Played</th>
+              <th>Goals</th>
+              <th>Yellow Cards</th>
+              <th>Red Cards</th>
+            </tr>
+        <% @userstats.each do |userstat| %>
+            <tr>
+              <td class="left"><%= link_to userstat.user.first_name, userstat_path(userstat.user_id) %></td>
+              <td><%= userstat.games_played %></td>
+              <td><%= userstat.minutes_played %></td>
+              <td><%= userstat.goals %></td>
+              <td><%= userstat.yellow_cards %></td>
+              <td><%= userstat.red_cards %></td>
+            <% end %>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
